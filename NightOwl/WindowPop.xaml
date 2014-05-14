@@ -1,0 +1,19 @@
+﻿<Window x:Class="NightOwl.WindowPop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowPop" Height="200" Width="300" WindowStyle="None" Background="Transparent" AllowsTransparency="True" FontFamily="Microsoft YaHei" >
+    <Border Width="250" Height="140" BorderThickness="1" CornerRadius="15">
+    	<Border.Background>
+    		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    			<GradientStop Color="#FF375FDC" Offset="0.323"/>
+    			<GradientStop Color="#FF40A7BA" Offset="0.069"/>
+    		</LinearGradientBrush>
+    	</Border.Background>
+        <Canvas>
+            <TextBlock TextWrapping="Wrap" Text="NightOwl" VerticalAlignment="Top" FontFamily="Microsoft YaHei" HorizontalAlignment="Left" Foreground="#FF5C4747" FontWeight="Bold" FontSize="14.667" Canvas.Left="7" Canvas.Top="2"/>
+            <TextBlock x:Name="CustomMessage" Canvas.Left="56" TextWrapping="Wrap" Canvas.Top="32.597" Width="150" Height="70" FontSize="16" Foreground="#FFF3F3F3" ><Run Language="zh-cn" Text="This is a message"/></TextBlock>
+            <Button  Style="{DynamicResource MyButton}" Content="OK" Canvas.Left="91" Canvas.Top="112.597" Foreground="#FFE2E2E2" Height="20" Width="60" Click="Button_Click" FontSize="13.333" Background="#FF181818" />
+            <Image Height="40" Canvas.Top="46.597" Width="40" Source="pics/Information.png" Canvas.Left="7"/>
+        </Canvas>
+    </Border>
+</Window>

@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E3F258F-2A1D-49A2-A46A-622842C732A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NightOwl</RootNamespace>
+    <AssemblyName>NightOwl</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\v-telong\Desktop\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>owl.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>968DB9B75A74B7A6F1B6A13546114823516BBE98</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NightOwl_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GifImageLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\GifImageLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sina.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Sina.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Command\ControlNotification.cs" />
+    <Compile Include="Comments.cs" />
+    <Compile Include="CommentWindow.xaml.cs">
+      <DependentUpon>CommentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="ConfigWindow.xaml.cs">
+      <DependentUpon>ConfigWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Display.xaml.cs">
+      <DependentUpon>Display.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Emotions.xaml.cs">
+      <DependentUpon>Emotions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FancyBalloon.xaml.cs">
+      <DependentUpon>FancyBalloon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FancyPopup.xaml.cs">
+      <DependentUpon>FancyPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forwards.cs" />
+    <Compile Include="ForwardWindow.xaml.cs">
+      <DependentUpon>ForwardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GoodByePage.xaml.cs">
+      <DependentUpon>GoodByePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageLook.xaml.cs">
+      <DependentUpon>ImageLook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Info.cs" />
+    <Compile Include="Json2XML.cs" />
+    <Compile Include="Loadingxaml.xaml.cs">
+      <DependentUpon>Loadingxaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PicConverter.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="TextConverter.cs" />
+    <Compile Include="TimeConverter.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UserWindow.xaml.cs">
+      <DependentUpon>UserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPop.xaml.cs">
+      <DependentUpon>WindowPop.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CommentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConfigWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Display.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Emotions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FancyBalloon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FancyPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForwardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GoodByePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImageLook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Loadingxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NotifyIconResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\MainWinStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="owl.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\BigPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\closeBtn.png" />
+    <Resource Include="pics\minBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\teddytest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\MyFriends.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\MyFriends2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\atMe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\comments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\MyFoot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Owl_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\biaoqing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\LoginPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\nightLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\CallRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\newMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\LoginLoading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Image_entity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Image_re_entity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\CloseImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\LocationMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Comment.png" />
+    <Resource Include="pics\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\CloseSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\myself.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\atMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\ajax-loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\loadinfo_net.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\loading6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Baby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\mail_replay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Email-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Emotions\[good].gif" />
+    <Resource Include="Emotions\[kiss].gif" />
+    <Resource Include="Emotions\[ok].gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Homealt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Favorites.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\ssss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\dddd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\xxxx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\qqqq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\gggg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\saojiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FriendsTimeLine.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Comment2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\forward2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\version.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Version.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pics\atComment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NetDimension.Weibo\NetDimension.Weibo35.csproj">
+      <Project>{7b795714-40d6-4b2e-a277-cbe13c33e1ed}</Project>
+      <Name>NetDimension.Weibo35</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

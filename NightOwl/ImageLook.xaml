@@ -1,0 +1,21 @@
+﻿<Window x:Class="NightOwl.ImageLook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Night Owl Picture Viewer"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    
+    <Border CornerRadius="15" BorderThickness="1,1,1,1" Height="auto" Width="auto" Margin="1" MouseLeftButtonDown="Border_MouseLeftButtonDown" >
+    	<Border.Background>
+            <ImageBrush x:Name="haha" ></ImageBrush>
+        </Border.Background>
+        <Canvas>
+            <!--<Image x:Name="CloseImage" Canvas.Top="20" Canvas.Right="20" Source="pics\closeimage.png" Width="32" Height="32" Opacity="0.6" MouseLeftButtonUp="CloseImage_MouseLeftButtonUp_1"></Image>-->
+            <Button Width="32" Height="32" Click="Button_Click" Canvas.Top="20" Canvas.Right="20" Opacity="0.6">
+                <Button.Background>
+                    <ImageBrush ImageSource="/NightOwl;component/pics/CloseImage.png" />
+                </Button.Background>
+            </Button>
+        </Canvas>
+    </Border>
+    
+</Window>

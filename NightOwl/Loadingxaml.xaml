@@ -1,0 +1,12 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:GifImageLib="clr-namespace:GifImageLib;assembly=GifImageLib" x:Class="NightOwl.Loadingxaml"
+        Title="Loadingxaml" Height="150" Width="150" WindowStyle="None" Background="Transparent" AllowsTransparency="True" ShowInTaskbar="False">
+    <Border Background="Black" BorderThickness="1" CornerRadius="15" Width="100" Height="100">
+    	<Canvas>
+            <GifImageLib:GifImage Source="pics\loadinfo_net.gif" Height="48" Canvas.Left="26" Canvas.Top="16" Width="48"/>
+            <TextBlock Canvas.Left="16" TextWrapping="Wrap" Text="Loading..." Canvas.Top="73" Foreground="#FFFFFFCC" FontFamily="Microsoft YaHei" FontSize="14.667"/>
+    	</Canvas>
+    </Border>
+</Window>
